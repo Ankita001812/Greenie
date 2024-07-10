@@ -11,5 +11,5 @@
 
 .navbar {
   position: relative;
-  z-index: 1; /* Ensure the navbar is on top of the background */
+  /* z-index: 1; Ensure the navbar is on top of the background */
 }
