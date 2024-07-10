@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function Fru() {
+const Fru = () => {
   return (
-    <div>
-      
+    <div className="veg-container">
+      <h1 className="display-2">fruits</h1>
     </div>
-  )
-}
+  );
+};
+
+export default Fru;

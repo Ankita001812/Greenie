@@ -1,13 +1,11 @@
-import React from "react";
-import "./Home.css";
+import React from 'react';
 
-// import orangenavel from "../images/orangenavel.jpg";
-// import kiwi from "../images/organic-kiwis.jpg";
-
-export default function Home() {
+const Home = () => {
   return (
-    <div>
-      
+    <div className="display-2">
+      Home Page
     </div>
   );
-}
+};
+
+export default Home;

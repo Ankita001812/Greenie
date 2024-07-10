@@ -9,8 +9,7 @@
   /* z-index: -1; */
 }
 
-
 .navbar {
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Ensure the navbar is on top of the background */
 }

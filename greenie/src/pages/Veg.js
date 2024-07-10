@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import "./Veg.css";
 
-export default function Veg() {
+const Veg = () => {
   return (
-    <div>
-      
+    <div className="veg-container">
+      <h1 className="display-2">Vegetables</h1>
     </div>
-  )
-}
+  );
+};
+
+export default Veg;

@@ -10,9 +10,9 @@ function Nav() {
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <div className="navbar-brand ">
-            {/* <Link to="/" className="nav-link"> */}
+            
               <span className="fw-bold text-light display-4">GrEEniE</span>
-            {/* </Link> */}
+            
           </div>
           <button
             className="navbar-toggler"
@@ -33,7 +33,7 @@ function Nav() {
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link to="/vegetables" className="nav-link">
+                <Link to="/veg" className="nav-link">
                   Vegetables
                 </Link>
               </li>
