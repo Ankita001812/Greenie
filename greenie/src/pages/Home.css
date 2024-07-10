@@ -1,0 +1,21 @@
+.carousel-item {
+  height: 32rem;
+  display: flex;
+  position: relative;
+  align-items: center; /* Vertically center the images */
+  justify-content: center; /* Horizontally center the images */
+}
+
+.carousel-item img {
+  object-fit: cover; /* Ensure the images cover the container */
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 50px;
+  text-align: center; /* Center align text */
+  color: white; /* Make text white for better visibility */
+}
