@@ -1,7 +1,7 @@
 import React from "react";
 import "./Veg.css";
 
-import avocado from "../images/avocado.png";
+
 import brocoli from "../images/brocoli.jpg";
 import brownonion from "../images/brownonion.png";
 import redonion from "../images/redonion.png";
@@ -16,14 +16,7 @@ import cabbage from "../images/cabbage.jpg";
 
 const Veg = () => {
   const vegies = [
-    {
-      name: "Avocado Shepard",
-      price: 1.0,
-      per: "1EA",
-      quantity: 0,
-      img: avocado,
-      rate: 0,
-    },
+   
     {
       name: "Fresh Broccoli",
       price: 2.15,
@@ -32,14 +25,7 @@ const Veg = () => {
       img: brocoli,
       rate: 0,
     },
-    {
-      name: "Brown Onion",
-      price: 2.45,
-      per: "kg",
-      quantity: 0,
-      img: brownonion,
-      rate: 0,
-    },
+    
 
     {
       name: "Cherry Tomatoes",
@@ -59,22 +45,7 @@ const Veg = () => {
       rate: 0,
     },
 
-    {
-      name: "Garlic Head",
-      price: 1.55,
-      per: "1EA",
-      quantity: 0,
-      img: garlic,
-      rate: 0,
-    },
-    {
-      name: "Potato Brushed",
-      price: 0.73,
-      per: "1EA",
-      quantity: 0,
-      img: potato,
-      rate: 0,
-    },
+    
     {
       name: "Red Capsicum",
       price: 1.98,
@@ -114,13 +85,37 @@ const Veg = () => {
       img: cabbage,
       rate: 0,
     },
+    {
+      name: "Garlic Head",
+      price: 1.55,
+      per: "1EA",
+      quantity: 0,
+      img: garlic,
+      rate: 0,
+    },
+    {
+      name: "Potato Brushed",
+      price: 0.73,
+      per: "1EA",
+      quantity: 0,
+      img: potato,
+      rate: 0,
+    },
+    {
+      name: "Brown Onion",
+      price: 2.45,
+      per: "kg",
+      quantity: 0,
+      img: brownonion,
+      rate: 0,
+    },
   ];
 
   // const [veg, setVeg] = useState(vegies);
 
   return (
     <div className="container">
-      <h1 className="display-5 fw-bold text-center my-4">Vegetables</h1>
+      <h1 className="display-5 fw-bold text-center text-info my-4">Vegetables</h1>
 
       <div className="row">
         

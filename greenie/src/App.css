@@ -8,5 +8,5 @@
 .content {
   position: relative;
   /* z-index: 1;                    Ensure content is on top of the background */
-  padding: 200px;
+  padding: 20px;
 }
