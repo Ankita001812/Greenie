@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Fru = () => {
   return (
     <div className="container">
