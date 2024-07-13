@@ -17,8 +17,14 @@
 
 .card-title {
   font-size: 1.2rem;
+  color: burlywood;
 }
 
 .card-text {
   font-size: 1rem;
+  color: burlywood;
+}
+
+.card-body{
+  background-color: black;
 }

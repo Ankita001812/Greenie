@@ -96,7 +96,7 @@ const Fru = () => {
     },
   ]
   return (
-    <div className="container">
+    <div className="container" style={{paddingTop: "100px"}}>
       <h1 className="display-5 fw-bold text-center text-info my-4">Fruits</h1>
 
       <div className="row">
