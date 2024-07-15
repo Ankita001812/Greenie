@@ -14,3 +14,18 @@
   width: 100%;
   z-index: 1;
 }
+
+.cart-icon, .pro-icon {
+  width: 62px; 
+  height: 42px; 
+  margin-right: 15px;
+  transition: transform 0.2s;
+}
+
+.nab-item{
+  margin-right: 20px;
+}
+
+.cart-icon:hover, .pro-icon:hover, .nav-item:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}

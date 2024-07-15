@@ -2,6 +2,8 @@ import React from "react";
 import bg from "../images/bg.png";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import cart from "../images/cart.png";
+import pro from "../images/proicon.png";
 
 function Nav() {
   return (
@@ -25,8 +27,11 @@ function Nav() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse display-6" id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto fw-bold">
+          <div
+            className="collapse navbar-collapse display-6"
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav fw-bold">
               <li className="nav-item active">
                 <Link to="/" className="nav-link">
                   Home
@@ -37,9 +42,26 @@ function Nav() {
                   Vegetables
                 </Link>
               </li>
-              <li className="nav-item ">
+              <li className="nav-item">
                 <Link to="/fruits" className="nav-link">
                   Fruits
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div
+            className="collapse navbar-collapse "
+            id="navbarSupportedContent"
+          >
+            <ul className="navbar-nav ms-auto ">
+              <li className="nav-item active">
+                <Link to="/shoppingcart" className="nav-link">
+                  <img src={cart} className="cart-icon" alt="cart" />
+                </Link>
+              </li>
+              <li className="nav-item ">
+                <Link to="/signup" className="nav-link">
+                  <img src={pro} className="pro-icon" alt="profile" />
                 </Link>
               </li>
             </ul>
@@ -49,9 +71,5 @@ function Nav() {
     </div>
   );
 }
-
-
-
-
 
 export default Nav;
