@@ -67,10 +67,13 @@ function Nav({username}) {
               </li>
             </ul>
           </div>
+          {username && (
+            <div className="navbar-text d-flex justify-content-center text-success welcome-message">
+              Welcome {username}!
+            </div>
+          )}
         </div>
-        <div className="container display-2 d-flex justify-content-center text-danger" style={{ paddingTop: "100px" }}>
-        {username ? `Welcome, ${username}` : ""}
-        </div>  
+  
       </nav>
 
     </div>
