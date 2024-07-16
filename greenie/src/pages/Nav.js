@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import cart from "../images/cart.png";
 import pro from "../images/proicon.png";
 
-function Nav() {
+function Nav({username}) {
   return (
     <div>
+
       <img src={bg} className="bg-img" alt="background-image" />
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
@@ -68,6 +69,9 @@ function Nav() {
           </div>
         </div>
       </nav>
+      <div className="container display-2 d-flex justify-content-center text-light" style={{ paddingTop: "100px" }}>
+        {username ? `Welcome, ${username}` : ""}
+      </div>
     </div>
   );
 }
