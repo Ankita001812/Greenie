@@ -6,7 +6,7 @@ import organicKiwisImage from "../images/organic-kiwis.jpg";
 
 const Home = () => {
   return (
-    <div className="display-4 text-center text-info" style={{padding: "200px"}}>
+    <div className="display-4 text-center text-info" style={{padding: "180px"}}>
       {/* <i>Weekly organic specials</i> */}
       <div
         id="carouselExampleControls"

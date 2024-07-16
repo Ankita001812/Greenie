@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
   const inituser = { email: "", pass: ""};
   const [val, setVal] = useState(inituser);
-  const navigate = useNavigate();
+  
 
   const handleChange = (e) => {
     // Get the name and value of the input field that triggered the event
@@ -40,8 +40,8 @@ const Login = () => {
     // alert("Registration successful!");
 
     
-    navigate("/");
     
+    window.location.href = "/";
   };
 
   return (

@@ -23,13 +23,6 @@ const Signup = () => {
     localStorage.setItem("gusers", JSON.stringify(exist));
     console.log(val);
 
-    // const loggedEmail = JSON.parse(localStorage.getItem("gemail")) || [];
-    // loggedEmail.push(val.email);
-    // localStorage.setItem("gemail", JSON.stringify(loggedEmail));
-
-    // const loggedUsername = JSON.parse(localStorage.getItem("gusername")) || [];
-
-    // localStorage.setItem("gusername", JSON.stringify(loggedUsername));
 
     alert("Registration successful!");
     // navigate("/");
