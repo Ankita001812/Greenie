@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const inituser = { email: "", pass: ""};
   const [val, setVal] = useState(inituser);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     // Get the name and value of the input field that triggered the event
@@ -32,11 +32,15 @@ const Login = () => {
 
     localStorage.setItem("gemaillogged", JSON.stringify(user.email));
     console.log(user.email);
+    localStorage.setItem("gusernamelogged", JSON.stringify(user.username));
+    console.log(user.username);
+
+
     console.log("log in successful!")
     // alert("Registration successful!");
 
     
-    // navigate("/");
+    navigate("/");
     
   };
 

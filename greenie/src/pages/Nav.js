@@ -68,10 +68,11 @@ function Nav({username}) {
             </ul>
           </div>
         </div>
-      </nav>
-      <div className="container display-2 d-flex justify-content-center text-light" style={{ paddingTop: "100px" }}>
+        <div className="container display-2 d-flex justify-content-center text-danger" style={{ paddingTop: "100px" }}>
         {username ? `Welcome, ${username}` : ""}
-      </div>
+        </div>  
+      </nav>
+
     </div>
   );
 }
