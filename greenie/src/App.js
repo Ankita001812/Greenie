@@ -10,7 +10,7 @@ import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 
 function App() {
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState(null);
   useEffect(() => {
     const fetchUser = async () => {
       const user = JSON.parse(localStorage.getItem("gusernamelogged")) || [];

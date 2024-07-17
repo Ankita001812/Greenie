@@ -6,6 +6,17 @@ import cart from "../images/cart.png";
 import pro from "../images/proicon.png";
 
 function Nav({ username }) {
+
+  const handleProfileClick = () => {
+    if (username) {
+      
+      window.location.href = "/profile";
+    } else {
+      
+      window.location.href = "/signup";
+    }
+  };
+
   return (
     <div>
       <img src={bg} className="bg-img" alt="background-image" />
@@ -59,17 +70,13 @@ function Nav({ username }) {
                   <img src={cart} className="cart-icon" alt="cart" />
                 </Link>
               </li>
-              <li className="nav-item ">
-                {username ? (
-                  <Link to="/profile" className="nav-link">
-                    <img src={pro} className="pro-icon" alt="profile" />
-                  </Link>
-                ) : (
-                  <Link to="/signup" className="nav-link">
-                    <img src={pro} className="pro-icon" alt="profile" />
-                  </Link>
-                )}
+ 
+              <li className="nav-item">
+                <Link to="/signup" className="nav-link" onClick={handleProfileClick}>
+                  <img src={pro} className="pro-icon" alt="profile" />
+                </Link>
               </li>
+
             </ul>
           </div>
           {username && (

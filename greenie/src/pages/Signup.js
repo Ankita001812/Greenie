@@ -43,7 +43,7 @@ const Signup = () => {
           <input
             type="email"
             className="form-control"
-            id="inputEmail4"
+            id="email"
             // name is required to be mtached with the
             name="email"
             value={val.email}

@@ -1,32 +1,47 @@
 import React, { useEffect, useState } from "react";
-
+import {Link, useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const [currUser, setCurrUser] = useState(null);
+  const navigate = useNavigate();
 
-  const [currUser, setCurrUser] = useState('');
+  useEffect(() => {
+    const logged = localStorage.getItem("gemaillogged");
 
-  useEffect (() => {
-    const logged = localStorage.getItem('gemaillogged');
+    if (logged) {
+      const users = JSON.parse(localStorage.getItem("gusers")) || [];
+      
+      const user = users.find((u) => u.email === JSON.parse(logged));
 
-    if(logged){
-      const users = JSON.parse(localStorage.getItem('gusers')) || [];
-      const user = users.find(u => u.email === logged);
-
-      setCurrUser(user || users[0]);
+      setCurrUser(user );
       console.log(user);
-
     }
+  }, []);
 
-  }, [])
+  if (!currUser) {
+    navigate('/signup'); // Redirect to signup if currUser is null
+    return <div></div>; // Return null to prevent rendering anything
+  }
 
+  const logOut = () => {
+    console.log("Logged out!");
+    localStorage.removeItem('gemaillogged');
+    localStorage.removeItem('gusernamelogged');
+    window.location.href = "/";
+
+    navigate('/signup')
+  }
 
   return (
-    
-        <div
+    <div
       className="container d-flex justify-content-center "
       style={{ paddingTop: "150px" }}
     >
-      <form className="row" >
+      <div
+      className="container d-flex justify-content-center fw-bold "
+      
+       >  Your Account Details </div>
+      <form className="row">
         <div className="col-12 mb-3">
           <label htmlFor="inputEmail4" className="form-label">
             Email
@@ -68,22 +83,25 @@ const Profile = () => {
             // onChange={handleChange}
           />
         </div>
-    
 
         <div className="col-12">
-
-          <button type="submit" className="btn btn-danger" style={{ marginRight: "40px" }}>
+          <button
+            type="submit"
+            className="btn btn-danger"
+            style={{ marginRight: "40px" }}
+            onClick={logOut}
+          >
             Log Out
           </button>
-          <button type="submit" className="btn btn-primary" >
-            Sign In
-          </button>
-   
+          <Link to="/signup">
+            <button type="submit" className="btn btn-primary">
+              Sign In
+            </button>
+          </Link>
         </div>
         <br />
       </form>
     </div>
-
   );
 };
 
