@@ -6,8 +6,6 @@ import cart from "../images/cart.png";
 import pro from "../images/proicon.png";
 
 function Nav({ username }) {
-
-
   return (
     <div>
       <img src={bg} className="bg-img" alt="background-image" />
@@ -61,7 +59,7 @@ function Nav({ username }) {
                   <img src={cart} className="cart-icon" alt="cart" />
                 </Link>
               </li>
- 
+
               <li className="nav-item ">
                 {username ? (
                   <Link to="/profile" className="nav-link">
@@ -73,7 +71,6 @@ function Nav({ username }) {
                   </Link>
                 )}
               </li>
-
             </ul>
           </div>
           {username && (

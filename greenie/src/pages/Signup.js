@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const inituser = { username: "", email: "", pass: "", confpass: "" };
   const [val, setVal] = useState(inituser);
-  // const navigate = useNavigate();
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     // Get the name and value of the input field that triggered the event
@@ -18,16 +19,22 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const dateJoined = new Date().toLocaleDateString();
-    val.dateJoined = dateJoined;
+    if (val.pass === val.confpass) {
+      const dateJoined = new Date().toLocaleDateString();
+      val.dateJoined = dateJoined;
 
-    const exist = JSON.parse(localStorage.getItem("gusers")) || [];
-    exist.push(val);
-    localStorage.setItem("gusers", JSON.stringify(exist));
-    console.log(val);
+      const exist = JSON.parse(localStorage.getItem("gusers")) || [];
+      exist.push(val);
+      localStorage.setItem("gusers", JSON.stringify(exist));
+      console.log(val);
 
-    alert("Registration successful!");
-    // navigate("/");
+      alert("Registration successful!");
+      navigate("/");
+    } else {
+      setError("Passwords do not match. Please re-enter.");
+    
+    setVal((prev) => ({ ...prev, pass: "", confpass: "" }));
+    }
   };
 
   return (
@@ -69,7 +76,7 @@ const Signup = () => {
           </label>
           <input
             type="password"
-            className="form-control"
+            className={`form-control ${error ? "is-invalid" : ""}`}
             id="password"
             name="pass"
             value={val.pass}
@@ -82,17 +89,22 @@ const Signup = () => {
           </label>
           <input
             type="password"
-            className="form-control"
+            className={`form-control ${error ? "is-invalid" : ""}`}
             id="confirmpassword"
             name="confpass"
             value={val.confpass}
             required
             onChange={handleChange}
           />
+          {error && <div className="invalid-feedback">{error}</div>}
         </div>
 
         <div className="col-12">
-          <button type="submit" className="btn btn-primary" style={{ marginRight: "40px" }}>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{ marginRight: "40px" }}
+          >
             Sign In
           </button>
           <Link to="/login">
