@@ -13,7 +13,7 @@ function App() {
   const [username, setUsername] = useState(null);
   useEffect(() => {
     const fetchUser = async () => {
-      const user = JSON.parse(localStorage.getItem("gusernamelogged")) || [];
+      const user = JSON.parse(localStorage.getItem("gusernamelogged")) ;
       console.log(user);
       if (user) {
         setUsername(user);

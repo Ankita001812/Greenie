@@ -7,15 +7,6 @@ import pro from "../images/proicon.png";
 
 function Nav({ username }) {
 
-  const handleProfileClick = () => {
-    if (username) {
-      
-      window.location.href = "/profile";
-    } else {
-      
-      window.location.href = "/signup";
-    }
-  };
 
   return (
     <div>
@@ -71,10 +62,16 @@ function Nav({ username }) {
                 </Link>
               </li>
  
-              <li className="nav-item">
-                <Link to="/signup" className="nav-link" onClick={handleProfileClick}>
-                  <img src={pro} className="pro-icon" alt="profile" />
-                </Link>
+              <li className="nav-item ">
+                {username ? (
+                  <Link to="/profile" className="nav-link">
+                    <img src={pro} className="pro-icon" alt="profile" />
+                  </Link>
+                ) : (
+                  <Link to="/signup" className="nav-link">
+                    <img src={pro} className="pro-icon" alt="profile" />
+                  </Link>
+                )}
               </li>
 
             </ul>
