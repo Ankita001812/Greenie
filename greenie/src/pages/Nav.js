@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 import cart from "../images/cart.png";
 import pro from "../images/proicon.png";
 
-function Nav({username}) {
+function Nav({ username }) {
   return (
     <div>
-
       <img src={bg} className="bg-img" alt="background-image" />
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
@@ -61,9 +60,15 @@ function Nav({username}) {
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link to="/signup" className="nav-link">
-                  <img src={pro} className="pro-icon" alt="profile" />
-                </Link>
+                {username ? (
+                  <Link to="/profile" className="nav-link">
+                    <img src={pro} className="pro-icon" alt="profile" />
+                  </Link>
+                ) : (
+                  <Link to="/signup" className="nav-link">
+                    <img src={pro} className="pro-icon" alt="profile" />
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
@@ -73,9 +78,7 @@ function Nav({username}) {
             </div>
           )}
         </div>
-  
       </nav>
-
     </div>
   );
 }

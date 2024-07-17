@@ -18,11 +18,13 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const dateJoined = new Date().toLocaleDateString();
+    val.dateJoined = dateJoined;
+
     const exist = JSON.parse(localStorage.getItem("gusers")) || [];
     exist.push(val);
     localStorage.setItem("gusers", JSON.stringify(exist));
     console.log(val);
-
 
     alert("Registration successful!");
     // navigate("/");
@@ -90,17 +92,16 @@ const Signup = () => {
         </div>
 
         <div className="col-12">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary" style={{ marginRight: "40px" }}>
             Sign In
           </button>
-        </div>
-        <div className="col-12">
           <Link to="/login">
             <button type="submit" className="btn btn-primary">
               Log In
             </button>
           </Link>
         </div>
+        <br />
       </form>
     </div>
   );

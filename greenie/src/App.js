@@ -7,12 +7,13 @@ import Veg from "./pages/Veg";
 import Fru from "./pages/Fru";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 
 function App() {
   const [username, setUsername] = useState("");
   useEffect(() => {
     const fetchUser = async () => {
-      const user = JSON.parse(localStorage.getItem("gusernamelogged")) || [] ;
+      const user = JSON.parse(localStorage.getItem("gusernamelogged")) || [];
       console.log(user);
       if (user) {
         setUsername(user);
@@ -33,6 +34,7 @@ function App() {
             <Route path="/fruits" element={<Fru />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
       </div>
