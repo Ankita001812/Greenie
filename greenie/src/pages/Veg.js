@@ -13,17 +13,9 @@ import carrots from "../images/organic-carrots.jpg";
 import tomatoes from "../images/organic-tomatoes.jpg";
 import cabbage from "../images/cabbage.jpg";
 
-const Veg = ({ addToCart }) => {
+const Veg = ({ addToCart , username}) => {
   const vegies = [
-    {
-      name: "Fresh Broccoli",
-      price: 2.15,
-      per: "1EA",
-      quantity: 0,
-      img: brocoli,
-      rate: 0,
-    },
-
+  
     {
       name: "Cherry Tomatoes",
       price: 0.26,
@@ -49,14 +41,7 @@ const Veg = ({ addToCart }) => {
       quantity: 0,
       img: redcapsicum,
     },
-    {
-      name: "Red Onion",
-      price: 9.85,
-      per: "kg",
-      quantity: 0,
-      img: redonion,
-      rate: 0,
-    },
+   
     {
       name: "Organic Carrots",
       price: 2.99,
@@ -71,6 +56,14 @@ const Veg = ({ addToCart }) => {
       per: "kg",
       quantity: 0,
       img: tomatoes,
+      rate: 0,
+    },
+    {
+      name: "Red Onion",
+      price: 9.85,
+      per: "kg",
+      quantity: 0,
+      img: redonion,
       rate: 0,
     },
     {
@@ -89,6 +82,15 @@ const Veg = ({ addToCart }) => {
       img: garlic,
       rate: 0,
     },
+    {
+      name: "Fresh Broccoli",
+      price: 2.15,
+      per: "1EA",
+      quantity: 0,
+      img: brocoli,
+      rate: 0,
+    },
+
     {
       name: "Potato Brushed",
       price: 0.73,
@@ -126,7 +128,18 @@ const Veg = ({ addToCart }) => {
                   <strong>${v.price}</strong>/{v.per}
                 </p>
               </div>
-              <div className="btn">
+              
+              {/* <div className="btn">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary"
+                  onClick={() => addToCart(v)}
+                >
+                  Add to Cart
+                </button>
+              </div> */}
+              {username && username !== null && (
+                <div className="btn">
                 <button
                   type="button"
                   className="btn btn-outline-primary"
@@ -135,6 +148,7 @@ const Veg = ({ addToCart }) => {
                   Add to Cart
                 </button>
               </div>
+              )}
             </div>
           </div>
         ))}

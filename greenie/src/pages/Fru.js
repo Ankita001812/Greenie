@@ -11,7 +11,7 @@ import greenapple from "../images/greenapples.jpg";
 import orangenavel from "../images/orangenavel.jpg";
 import blueberries from "../images/blueberries.jpg";
 
-const Fru = ({addToCart}) => {
+const Fru = ({addToCart, username}) => {
   const frus = [
     {
       name: "Kiwi",
@@ -108,7 +108,7 @@ const Fru = ({addToCart}) => {
                 <p className="card-text">
                   <strong>${f.price}</strong>/{f.per}
                 </p>
-                <div className="btn">
+                {/* <div className="btn">
                   <button
                     type="button"
                     className="btn btn-outline-primary"
@@ -116,7 +116,18 @@ const Fru = ({addToCart}) => {
                   >
                     Add to Cart
                   </button>
-                </div>
+                </div> */}
+                {username && username !== null && (
+                <div className="btn">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary"
+                  onClick={() => addToCart(f)}
+                >
+                  Add to Cart
+                </button>
+              </div>
+              )}
               </div>
             </div>
           </div>
