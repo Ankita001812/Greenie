@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import avocado from "../images/avocado.png";
 import kiwi from "../images/organic-kiwis.jpg";
@@ -11,9 +11,8 @@ import greenapple from "../images/greenapples.jpg";
 import orangenavel from "../images/orangenavel.jpg";
 import blueberries from "../images/blueberries.jpg";
 
-
-const Fru = () => {
-  const frus =[
+const Fru = ({addToCart}) => {
+  const frus = [
     {
       name: "Kiwi",
       price: 0.99,
@@ -94,28 +93,35 @@ const Fru = () => {
       img: avocado,
       rate: 0,
     },
-  ]
+  ];
   return (
-    <div className="container" style={{paddingTop: "100px"}}>
+    <div className="container" style={{ paddingTop: "100px" }}>
       <h1 className="display-5 fw-bold text-center text-info my-4">Fruits</h1>
 
       <div className="row">
-        
-          {frus.map((f, i) => (
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
-              <div className="card h-100">
-                <img src={f.img} className="card-img-top" alt={f.name} />
-                <div className="card-body">
-                  <h5 className="card-title">{f.name}</h5>
-                  <p className="card-text">
-                    <strong>${f.price}</strong>/{f.per}
-                  </p>
+        {frus.map((f, i) => (
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
+            <div className="card h-100">
+              <img src={f.img} className="card-img-top" alt={f.name} />
+              <div className="card-body">
+                <h5 className="card-title">{f.name}</h5>
+                <p className="card-text">
+                  <strong>${f.price}</strong>/{f.per}
+                </p>
+                <div className="btn">
+                  <button
+                    type="button"
+                    className="btn btn-outline-primary"
+                    onClick={() => addToCart(f)}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
               </div>
             </div>
-          ))}
-        </div>
-      
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

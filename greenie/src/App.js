@@ -8,9 +8,24 @@ import Fru from "./pages/Fru";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Cart from "./pages/Cart";
 
 function App() {
   const [username, setUsername] = useState(null);
+  const [cartItems, setCartItems ] = useState([]);
+
+  const addToCart = (item) => {
+ 
+          
+    const newItems = {...item, quantity : 1};
+    setCartItems((prevCart) => [...prevCart, newItems])
+    // cartItems.push(item);
+    // localStorage.setItem('gcart', JSON.stringify(cartItems));
+    console.log(cartItems)
+    alert(`${item.name} has been added to the Shopping Cart`);
+    
+
+  } 
   useEffect(() => {
     const fetchUser = async () => {
       const user = JSON.parse(localStorage.getItem("gusernamelogged")) ;
@@ -30,11 +45,12 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/veg" element={<Veg />} />
-            <Route path="/fruits" element={<Fru />} />
+            <Route path="/veg" element={<Veg addToCart={addToCart}/>} />
+            <Route path="/fruits" element={<Fru addToCart={addToCart}/>} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path='/shoppingcart' element={<Cart cartItems={cartItems}/>} />
           </Routes>
         </div>
       </div>

@@ -27,6 +27,7 @@ const Profile = () => {
     console.log("Logged out!");
     localStorage.removeItem('gemaillogged');
     localStorage.removeItem('gusernamelogged');
+    localStorage.removeItem('gcart');
     window.location.href = "/";
 
     navigate('/signup')

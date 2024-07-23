@@ -1,7 +1,6 @@
 import React from "react";
 import "./Veg.css";
 
-
 import brocoli from "../images/brocoli.jpg";
 import brownonion from "../images/brownonion.png";
 import redonion from "../images/redonion.png";
@@ -14,9 +13,8 @@ import carrots from "../images/organic-carrots.jpg";
 import tomatoes from "../images/organic-tomatoes.jpg";
 import cabbage from "../images/cabbage.jpg";
 
-const Veg = () => {
+const Veg = ({ addToCart }) => {
   const vegies = [
-   
     {
       name: "Fresh Broccoli",
       price: 2.15,
@@ -25,7 +23,6 @@ const Veg = () => {
       img: brocoli,
       rate: 0,
     },
-    
 
     {
       name: "Cherry Tomatoes",
@@ -45,7 +42,6 @@ const Veg = () => {
       rate: 0,
     },
 
-    
     {
       name: "Red Capsicum",
       price: 1.98,
@@ -114,26 +110,35 @@ const Veg = () => {
   // const [veg, setVeg] = useState(vegies);
 
   return (
-    <div className="container" style={{paddingTop: "100px"}}>
-      <h1 className="display-5 fw-bold text-center text-info my-4">Vegetables</h1>
+    <div className="container" style={{ paddingTop: "100px" }}>
+      <h1 className="display-5 fw-bold text-center text-info my-4">
+        Vegetables
+      </h1>
 
       <div className="row">
-        
-          {vegies.map((v, i) => (
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
-              <div className="card h-100">
-                <img src={v.img} className="card-img-top" alt={v.name} />
-                <div className="card-body">
-                  <h5 className="card-title">{v.name}</h5>
-                  <p className="card-text">
-                    <strong>${v.price}</strong>/{v.per}
-                  </p>
-                </div>
+        {vegies.map((v, i) => (
+          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
+            <div className="card h-100">
+              <img src={v.img} className="card-img-top" alt={v.name} />
+              <div className="card-body">
+                <h5 className="card-title">{v.name}</h5>
+                <p className="card-text">
+                  <strong>${v.price}</strong>/{v.per}
+                </p>
+              </div>
+              <div className="btn">
+                <button
+                  type="button"
+                  className="btn btn-outline-primary"
+                  onClick={() => addToCart(v)}
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
-          ))}
-        </div>
-      
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
