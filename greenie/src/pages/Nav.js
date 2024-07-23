@@ -54,11 +54,14 @@ function Nav({ username }) {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav ms-auto ">
-              <li className="nav-item active">
+
+              {username && username !== null && (
+                <li className="nav-item active">
                 <Link to="/shoppingcart" className="nav-link">
                   <img src={cart} className="cart-icon" alt="cart" />
                 </Link>
-              </li>
+              </li> 
+              )}
 
               <li className="nav-item ">
                 {username ? (

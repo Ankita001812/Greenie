@@ -28,8 +28,8 @@ const Cart = ({ cartItems }) => {
   }
 
   return (
-    <div className="container" style={{ paddingTop: "100px" }}>
-      <h1 className="display-5 fw-bold text-center text-info my-4">
+    <div className="container" style={{ paddingTop: "90px" }}>
+      <h1 className="display-6 fw-bold text-center text-info my-4">
         Your Shopping Cart
       </h1>
 
