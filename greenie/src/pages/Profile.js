@@ -84,6 +84,29 @@ const Profile = () => {
             // onChange={handleChange}
           />
         </div>
+        {/* <div className="col-12 mb-3">
+          <label htmlFor="date" className="form-label">
+            Date Joined
+          </label>
+          <input
+            type="date"
+            className="form-control"
+            id="date"
+            // name is required to be mtached with the
+            name="dateJoined"
+            value={currUser.dateJoined ? new Date(currUser.dateJoined).toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric"
+            }) : new Date().toLocaleDateString("en-GB", {
+              day: "2-digit",
+              month: "2-digit",
+              year: "numeric"
+            })}
+            // onChange={handleChange}
+            disabled
+          />
+        </div> */}
 
         <div className="col-12">
           <button

@@ -119,7 +119,7 @@ const Veg = ({ addToCart , username}) => {
 
       <div className="row">
         {vegies.map((v, i) => (
-          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-4 mb-4" key={i}>
             <div className="card h-100">
               <img src={v.img} className="card-img-top" alt={v.name} />
               <div className="card-body">
@@ -128,16 +128,7 @@ const Veg = ({ addToCart , username}) => {
                   <strong>${v.price}</strong>/{v.per}
                 </p>
               </div>
-              
-              {/* <div className="btn">
-                <button
-                  type="button"
-                  className="btn btn-outline-primary"
-                  onClick={() => addToCart(v)}
-                >
-                  Add to Cart
-                </button>
-              </div> */}
+             
               {username && username !== null && (
                 <div className="btn">
                 <button

@@ -100,7 +100,7 @@ const Fru = ({addToCart, username}) => {
 
       <div className="row">
         {frus.map((f, i) => (
-          <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" key={i}>
+          <div className="col-12 col-sm-6 col-md-4 col-lg-4 mb-4" key={i}>
             <div className="card h-100">
               <img src={f.img} className="card-img-top" alt={f.name} />
               <div className="card-body">
@@ -108,15 +108,7 @@ const Fru = ({addToCart, username}) => {
                 <p className="card-text">
                   <strong>${f.price}</strong>/{f.per}
                 </p>
-                {/* <div className="btn">
-                  <button
-                    type="button"
-                    className="btn btn-outline-primary"
-                    onClick={() => addToCart(f)}
-                  >
-                    Add to Cart
-                  </button>
-                </div> */}
+                
                 {username && username !== null && (
                 <div className="btn">
                 <button
@@ -125,9 +117,9 @@ const Fru = ({addToCart, username}) => {
                   onClick={() => addToCart(f)}
                 >
                   Add to Cart
-                </button>
-              </div>
-              )}
+                 </button>
+                </div>
+                )}
               </div>
             </div>
           </div>
