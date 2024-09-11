@@ -12,23 +12,23 @@ import Cart from "./pages/Cart";
 
 function App() {
   const [username, setUsername] = useState(null);
-  const [cartItems, setCartItems ] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
- 
-          
-    const newItems = {...item, quantity : 1};
-    setCartItems((prevCart) => [...prevCart, newItems])
-    // cartItems.push(item);
-    // localStorage.setItem('gcart', JSON.stringify(cartItems));
-    console.log(cartItems)
-    alert(`${item.name} has been added to the Shopping Cart`);
-    
+    const exist = cartItems.find((cartItem) => cartItem.name === item.name);
 
-  } 
+    if (exist) {
+      alert(`${item.name} is been ALREADY added to the cart`);
+    } else {
+      const newItems = { ...item, quantity: 1 };
+      setCartItems((prevCart) => [...prevCart, newItems]);
+      console.log(cartItems);
+      alert(`${item.name} has been added to the Shopping Cart`);
+    }
+  };
   useEffect(() => {
     const fetchUser = async () => {
-      const user = JSON.parse(localStorage.getItem("gusernamelogged")) ;
+      const user = JSON.parse(localStorage.getItem("gusernamelogged"));
       console.log(user);
       if (user) {
         setUsername(user);
@@ -45,12 +45,21 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/veg" element={<Veg addToCart={addToCart} username={username}/>} />
-            <Route path="/fruits" element={<Fru addToCart={addToCart} username={username}/>} />
+            <Route
+              path="/veg"
+              element={<Veg addToCart={addToCart} username={username} />}
+            />
+            <Route
+              path="/fruits"
+              element={<Fru addToCart={addToCart} username={username} />}
+            />
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path='/shoppingcart' element={<Cart cartItems={cartItems}/>} />
+            <Route
+              path="/shoppingcart"
+              element={<Cart cartItems={cartItems} />}
+            />
           </Routes>
         </div>
       </div>
