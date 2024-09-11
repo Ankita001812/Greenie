@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 // Add user routes.
 require("./src/routes/user.route.js")(express, app);
 
-require("./src/routes/fruit.route.js")(express, app);
+require("./src/routes/fruit.route.js")(express, app);     //needed with (express, app) to continue with the get request in port 4000
 
 // Set port, listen for requests.
 const PORT = 4000;
