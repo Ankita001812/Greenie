@@ -1,4 +1,4 @@
-import React from "react";
+ import React from "react";
 
 import avocado from "../images/avocado.png";
 import kiwi from "../images/organic-kiwis.jpg";

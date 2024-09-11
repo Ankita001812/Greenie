@@ -10,7 +10,7 @@ const app = express();
 // Parse requests of content-type - application/json.
 app.use(express.json());
 
-// Add CORS suport.
+// CORS helps to prevent malicious websites from accessing sensitive information on the server
 app.use(cors());
 
 // Simple Hello World route.
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 
 // Add user routes.
 require("./src/routes/user.routes.js")(express, app);
-require("./src/routes/post.routes.js")(express, app);
+
 
 // Set port, listen for requests.
 const PORT = 4003;
