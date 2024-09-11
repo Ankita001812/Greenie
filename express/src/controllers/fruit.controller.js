@@ -1,10 +1,12 @@
 const db = require("../database");
 
 exports.all = async (req, res) => {
-  const fruits = await db.fru.findAll();
-
-  res.json(fruits);
+  
+    const fruits = await db.fru.findAll();
+    console.log(fruits); // Log the result to verify
+    res.json(fruits);
 };
+
 
 exports.one = async (req, res) => {
   const id = req.params.id;
