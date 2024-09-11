@@ -15,15 +15,17 @@ app.use(cors());
 
 // Simple Hello World route.
 app.get("/", (req, res) => {
-  res.json({ message: "Hello World!" });
+  res.json({ message: "Hello From Greenie!" });
 });
 
 // Add user routes.
-require("./src/routes/user.routes.js")(express, app);
+require("./src/routes/user.route.js")(express, app);
+
+require("./src/routes/fruit.route.js");
 
 
 // Set port, listen for requests.
-const PORT = 4003;
+const PORT = 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
