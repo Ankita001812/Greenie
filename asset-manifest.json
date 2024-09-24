@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/Greenie/static/css/main.28f68f37.css",
+    "main.js": "/Greenie/static/js/main.2c73a6ce.js",
+    "static/js/453.e58676b5.chunk.js": "/Greenie/static/js/453.e58676b5.chunk.js",
+    "static/media/redonion.png": "/Greenie/static/media/redonion.8765b090ddbceebae5cf.png",
+    "static/media/potato.png": "/Greenie/static/media/potato.8d449f9af5728a5db135.png",
+    "static/media/brownonion.png": "/Greenie/static/media/brownonion.2d9612bcb2a5c38438fe.png",
+    "static/media/avocado.png": "/Greenie/static/media/avocado.318e9e2ce33da4dfa001.png",
+    "static/media/bg.png": "/Greenie/static/media/bg.d0330e2a5a1f9915d9c4.png",
+    "static/media/redgrapes.jpg": "/Greenie/static/media/redgrapes.7e435af44978ca8768a9.jpg",
+    "static/media/greenchilli.jpg": "/Greenie/static/media/greenchilli.318205384696a3ff5b8e.jpg",
+    "static/media/brocoli.jpg": "/Greenie/static/media/brocoli.ea94341d4df89656b794.jpg",
+    "static/media/cabbage.jpg": "/Greenie/static/media/cabbage.eb6ba23cabf6c8685b76.jpg",
+    "static/media/organic-tomatoes.jpg": "/Greenie/static/media/organic-tomatoes.671eaccf6194820460fb.jpg",
+    "static/media/organic-carrots.jpg": "/Greenie/static/media/organic-carrots.4dea247d8023a68f4fee.jpg",
+    "static/media/banana.jpg": "/Greenie/static/media/banana.7f25f3fa58d19e090843.jpg",
+    "static/media/blueberries.jpg": "/Greenie/static/media/blueberries.857fc910ca8db6d0b676.jpg",
+    "static/media/whitegrapes.jpg": "/Greenie/static/media/whitegrapes.26a5adb8e20f4468fc4e.jpg",
+    "static/media/garlic.jpg": "/Greenie/static/media/garlic.57e7416084a2b61ada13.jpg",
+    "static/media/organic-apples.jpg": "/Greenie/static/media/organic-apples.332ad914caa8102850b1.jpg",
+    "static/media/orangenavel.jpg": "/Greenie/static/media/orangenavel.8ec7c1e7b8d45a29bd2a.jpg",
+    "static/media/apple.jpg": "/Greenie/static/media/apple.4816a152d648c9641b4c.jpg",
+    "static/media/cherrytomato.jpg": "/Greenie/static/media/cherrytomato.811e842cdec4d0ea0c78.jpg",
+    "static/media/redcapsicum.jpg": "/Greenie/static/media/redcapsicum.a6241a7c207783ff4a3a.jpg",
+    "static/media/organic-kiwis.jpg": "/Greenie/static/media/organic-kiwis.e2c64a2368a14ffc0f88.jpg",
+    "static/media/greenapples.jpg": "/Greenie/static/media/greenapples.184539a8cd045f1d5218.jpg",
+    "static/media/cart.png": "/Greenie/static/media/cart.a2586e20fd6b8d57a0f6.png",
+    "static/media/proicon.png": "/Greenie/static/media/proicon.3c8559f1af8837df2eb8.png",
+    "index.html": "/Greenie/index.html",
+    "main.28f68f37.css.map": "/Greenie/static/css/main.28f68f37.css.map",
+    "main.2c73a6ce.js.map": "/Greenie/static/js/main.2c73a6ce.js.map",
+    "453.e58676b5.chunk.js.map": "/Greenie/static/js/453.e58676b5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.28f68f37.css",
+    "static/js/main.2c73a6ce.js"
+  ]
+}
