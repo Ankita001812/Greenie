@@ -19,7 +19,7 @@ const Profile = () => {
   }, []);
 
   if (!currUser) {
-    navigate('/signup'); // Redirect to signup if currUser is null
+    navigate('/Greenie/signup'); // Redirect to signup if currUser is null
     return <div></div>; // Return null to prevent rendering anything
   }
 
@@ -30,7 +30,7 @@ const Profile = () => {
     localStorage.removeItem('gcart');
     window.location.href = "/";
 
-    navigate('/signup')
+    navigate('/Greenie/signup')
   }
 
   return (
@@ -117,7 +117,7 @@ const Profile = () => {
           >
             Log Out
           </button>
-          <Link to="/signup">
+          <Link to="/Greenie/signup">
             <button type="submit" className="btn btn-primary">
               Sign In
             </button>

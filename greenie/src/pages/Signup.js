@@ -29,7 +29,7 @@ const Signup = () => {
       console.log(val);
 
       alert("Registration successful!");
-      navigate("/");
+      navigate("/Greenie/");
     } else {
       setError("Passwords do not match. Please re-enter.");
     
@@ -107,7 +107,7 @@ const Signup = () => {
           >
             Sign In
           </button>
-          <Link to="/login">
+          <Link to="/Greenie/login">
             <button type="submit" className="btn btn-primary">
               Log In
             </button>

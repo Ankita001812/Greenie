@@ -41,7 +41,7 @@ const Login = () => {
 
     
     
-    window.location.href = "/";
+    window.location.href = "/Greenie/";
   };
 
   return (
