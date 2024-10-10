@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Greenie/static/css/main.28f68f37.css",
-    "main.js": "/Greenie/static/js/main.1bc54527.js",
+    "main.css": "/Greenie/static/css/main.7d7ff026.css",
+    "main.js": "/Greenie/static/js/main.70fe3a75.js",
     "static/js/453.e58676b5.chunk.js": "/Greenie/static/js/453.e58676b5.chunk.js",
     "static/media/redonion.png": "/Greenie/static/media/redonion.8765b090ddbceebae5cf.png",
     "static/media/potato.png": "/Greenie/static/media/potato.8d449f9af5728a5db135.png",
@@ -28,12 +28,12 @@
     "static/media/cart.png": "/Greenie/static/media/cart.a2586e20fd6b8d57a0f6.png",
     "static/media/proicon.png": "/Greenie/static/media/proicon.3c8559f1af8837df2eb8.png",
     "index.html": "/Greenie/index.html",
-    "main.28f68f37.css.map": "/Greenie/static/css/main.28f68f37.css.map",
-    "main.1bc54527.js.map": "/Greenie/static/js/main.1bc54527.js.map",
+    "main.7d7ff026.css.map": "/Greenie/static/css/main.7d7ff026.css.map",
+    "main.70fe3a75.js.map": "/Greenie/static/js/main.70fe3a75.js.map",
     "453.e58676b5.chunk.js.map": "/Greenie/static/js/453.e58676b5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28f68f37.css",
-    "static/js/main.1bc54527.js"
+    "static/css/main.7d7ff026.css",
+    "static/js/main.70fe3a75.js"
   ]
 }
