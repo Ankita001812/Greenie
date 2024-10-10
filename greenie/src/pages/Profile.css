@@ -1,0 +1,21 @@
+/* Profile.css */
+.card {
+  max-width: 600px;
+  margin: 0 auto; /* Center the card on the page */
+  background-color: rgb(49, 57, 56);
+
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #8aafc1;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+}
+
+.btn-primary {
+  background-color: #5a7ca0;
+}
+

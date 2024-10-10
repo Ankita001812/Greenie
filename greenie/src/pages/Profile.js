@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import "./Profile.css";
 
 const Profile = () => {
   const [currUser, setCurrUser] = useState(null);
@@ -10,121 +12,89 @@ const Profile = () => {
 
     if (logged) {
       const users = JSON.parse(localStorage.getItem("gusers")) || [];
-      
       const user = users.find((u) => u.email === JSON.parse(logged));
-
-      setCurrUser(user );
+      setCurrUser(user);
       console.log(user);
     }
   }, []);
 
   if (!currUser) {
-    navigate('/Greenie/signup'); // Redirect to signup if currUser is null
-    return <div></div>; // Return null to prevent rendering anything
+    navigate("/Greenie/signup"); // Redirect to signup if currUser is null
+    return <div></div>; // Return an empty div to prevent rendering anything
   }
 
   const logOut = () => {
     console.log("Logged out!");
-    localStorage.removeItem('gemaillogged');
-    localStorage.removeItem('gusernamelogged');
-    localStorage.removeItem('gcart');
+    localStorage.removeItem("gemaillogged");
+    localStorage.removeItem("gusernamelogged");
+    localStorage.removeItem("gcart");
     window.location.href = "/";
-
-    navigate('/Greenie/signup')
-  }
+    navigate("/Greenie/signup");
+  };
 
   return (
-    <div
-      className="container d-flex justify-content-center "
-      style={{ paddingTop: "150px" }}
-    >
-      <div
-      className="container d-flex justify-content-center fw-bold "
-      
-       >  Your Account Details </div>
-      <form className="row">
-        <div className="col-12 mb-3">
-          <label htmlFor="inputEmail4" className="form-label">
-            Email
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="inputEmail4"
-            // name is required to be mtached with the
-            name="email"
-            value={currUser.email}
-            // onChange={handleChange}
-            disabled
-          />
-        </div>
-        <div className="col-12 mb-3">
-          <label htmlFor="username" className="form-label">
-            Username
-          </label>
-          <input
-            type="username"
-            className="form-control"
-            id="username"
-            name="username"
-            value={currUser.username}
-            // onChange={handleChange}
-          />
-        </div>
-        <div className="col-12 mb-3">
-          <label htmlFor="password" className="form-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="password"
-            name="pass"
-            value={currUser.pass}
-            // onChange={handleChange}
-          />
-        </div>
-        {/* <div className="col-12 mb-3">
-          <label htmlFor="date" className="form-label">
-            Date Joined
-          </label>
-          <input
-            type="date"
-            className="form-control"
-            id="date"
-            // name is required to be mtached with the
-            name="dateJoined"
-            value={currUser.dateJoined ? new Date(currUser.dateJoined).toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "2-digit",
-              year: "numeric"
-            }) : new Date().toLocaleDateString("en-GB", {
-              day: "2-digit",
-              month: "2-digit",
-              year: "numeric"
-            })}
-            // onChange={handleChange}
-            disabled
-          />
-        </div> */}
+    <div className="container my-5 py-5">
+      <div className="card p-4">
+        <h2 className="text-center mb-4 fw-bold">Your Account Details</h2>
+        <form className="row g-3">
+          <div className="col-12">
+            <label htmlFor="inputEmail4" className="form-label fw-bold">
+              Email
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="inputEmail4"
+              name="email"
+              value={currUser.email}
+              disabled
+            />
+          </div>
 
-        <div className="col-12">
-          <button
-            type="submit"
-            className="btn btn-danger"
-            style={{ marginRight: "40px" }}
-            onClick={logOut}
-          >
-            Log Out
-          </button>
-          <Link to="/Greenie/signup">
-            <button type="submit" className="btn btn-primary">
-              Sign In
+          <div className="col-12">
+            <label htmlFor="username" className="form-label fw-bold">
+              Username
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="username"
+              name="username"
+              value={currUser.username}
+              disabled
+            />
+          </div>
+
+          <div className="col-12">
+            <label htmlFor="password" className="form-label fw-bold">
+              Password
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              name="pass"
+              value={currUser.pass}
+              disabled
+            />
+          </div>
+
+          <div className="d-flex justify-content-between mt-4">
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={logOut}
+            >
+              Log Out
             </button>
-          </Link>
-        </div>
-        <br />
-      </form>
+            <Link to="/Greenie/signup">
+              <button type="button" className="btn btn-primary">
+                Sign In
+              </button>
+            </Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

@@ -112,6 +112,7 @@ const Signup = () => {
               Log In
             </button>
           </Link>
+          
         </div>
         <br />
       </form>

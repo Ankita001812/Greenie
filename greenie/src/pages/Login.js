@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 const Login = () => {
-  const inituser = { email: "", pass: ""};
+  const inituser = { email: "", pass: "" };
   const [val, setVal] = useState(inituser);
-  
 
   const handleChange = (e) => {
     // Get the name and value of the input field that triggered the event
     const { name, value } = e.target;
     // Update the state with the new input value
     // setVal((prev) => ({ ...prev, [name]: [value] }));
-
 
     setVal((prev) => ({ ...prev, [name]: value }));
   };
@@ -29,18 +27,14 @@ const Login = () => {
       return;
     }
 
-
     localStorage.setItem("gemaillogged", JSON.stringify(user.email));
     console.log(user.email);
     localStorage.setItem("gusernamelogged", JSON.stringify(user.username));
     console.log(user.username);
 
-
-    console.log("log in successful!")
+    console.log("log in successful!");
     // alert("Registration successful!");
 
-    
-    
     window.location.href = "/Greenie/";
   };
 
@@ -58,7 +52,7 @@ const Login = () => {
             type="email"
             className="form-control"
             id="email"
-            // name is required to be mtached with the 
+            // name is required to be mtached with the
             name="email"
             value={val.email}
             onChange={handleChange}
@@ -79,11 +73,24 @@ const Login = () => {
           />
         </div>
 
-
         <div className="col-12">
           <button type="submit" className="btn btn-primary">
             Log In
           </button>
+          <br />
+        </div>
+        <br />
+        <br />
+
+        <div className="col-12">
+          <p className="mb-0">
+            Don't have an account?
+            <Link to="/Greenie/signup">
+              <button type="button" className="btn btn-primary">
+                SignUp
+              </button>
+            </Link>
+          </p>
         </div>
       </form>
     </div>
