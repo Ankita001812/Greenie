@@ -44,20 +44,20 @@ function App() {
         <Nav username={username} />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/Greenie/" element={<Home />} />
             <Route
-              path="/veg"
+              path="/Greenie/veg"
               element={<Veg addToCart={addToCart} username={username} />}
             />
             <Route
-              path="/fruits"
+              path="/Greenie/fruits"
               element={<Fru addToCart={addToCart} username={username} />}
             />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/Greenie/signup" element={<Signup />} />
+            <Route path="/Greenie/login" element={<Login />} />
+            <Route path="/Greenie/profile" element={<Profile />} />
             <Route
-              path="/shoppingcart"
+              path="/Greenie/shoppingcart"
               element={<Cart cartItems={cartItems} />}
             />
           </Routes>

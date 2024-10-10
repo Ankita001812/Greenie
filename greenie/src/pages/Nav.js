@@ -12,7 +12,7 @@ function Nav({ username }) {
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container">
           <div className="navbar-brand ">
-            <Link to="/" className="nav-link">
+            <Link to="/Greenie/" className="nav-link">
               <span className="fw-bold text-light display-4">GrEEniE</span>
             </Link>
           </div>
@@ -33,17 +33,17 @@ function Nav({ username }) {
           >
             <ul className="navbar-nav fw-bold">
               <li className="nav-item active">
-                <Link to="/" className="nav-link">
+                <Link to="/Greenie/" className="nav-link">
                   Home
                 </Link>
               </li>
               <li className="nav-item ">
-                <Link to="/veg" className="nav-link">
+                <Link to="/Greenie/veg" className="nav-link">
                   Vegetables
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/fruits" className="nav-link">
+                <Link to="/Greenie/fruits" className="nav-link">
                   Fruits
                 </Link>
               </li>
@@ -57,7 +57,7 @@ function Nav({ username }) {
 
               {username && username !== null && (
                 <li className="nav-item active">
-                <Link to="/shoppingcart" className="nav-link">
+                <Link to="/Greenie/shoppingcart" className="nav-link">
                   <img src={cart} className="cart-icon" alt="cart" />
                 </Link>
               </li> 
@@ -65,11 +65,11 @@ function Nav({ username }) {
 
               <li className="nav-item ">
                 {username ? (
-                  <Link to="/profile" className="nav-link">
+                  <Link to="/Greenie/profile" className="nav-link">
                     <img src={pro} className="pro-icon" alt="profile" />
                   </Link>
                 ) : (
-                  <Link to="/signup" className="nav-link">
+                  <Link to="/Greenie/signup" className="nav-link">
                     <img src={pro} className="pro-icon" alt="profile" />
                   </Link>
                 )}
